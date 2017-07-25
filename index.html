@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script>
+            "strict";
+
+            //PART 1:
+            // var students = [ 
+            // {first_name:  'Michael', last_name : 'Jordan'},
+            // {first_name : 'John', last_name : 'Rosales'},
+            // {first_name : 'Mark', last_name : 'Guillen'},
+            // {first_name : 'KB', last_name : 'Tonel'}
+            // ]
+
+            // function names(arr){
+            //     for (var i in arr) {
+            //         console.log(arr[i].first_name, arr[i].last_name);
+                    
+            //     }
+            // }
+
+            // names(students);
+
+            //PART 2:
+            var users = {
+                'Students': [ 
+                    {first_name:  'Michael', last_name : 'Jordan'},
+                    {first_name : 'John', last_name : 'Rosales'},
+                    {first_name : 'Mark', last_name : 'Guillen'},
+                    {first_name : 'KB', last_name : 'Tonel'}
+                ],
+                'Instructors': [
+                    {first_name : 'Michael', last_name : 'Choi'},
+                    {first_name : 'Martin', last_name : 'Puryear'}
+                ]
+            }
+            
+
+            function everyone (obj) {
+                
+                console.log("Students");
+                for(var i =0; i<obj.Students.length; i++) {
+                    var message = i+1 +" - ";  //used i with normal for loop instead of count
+                    message += obj.Students[i].first_name +" ";
+                    message += obj.Students[i].last_name;
+                    message += " - " + (obj.Students[i].first_name.length + obj.Students[i].last_name.length);
+                    console.log(message);
+                }
+                count = 0;
+                console.log("Instructors");
+                for(var i in obj.Instructors) {
+                    count+=1; //used count on this one with different for loop
+                    var message = count +" - ";
+                    message += obj.Instructors[i].first_name +" ";
+                    message += obj.Instructors[i].last_name;
+                    message += " - " + (obj.Instructors[i].first_name.length + obj.Instructors[i].last_name.length);
+                    console.log(message);
+                }
+            }
+
+            everyone(users);
+
+        </script>       
+
+    </head>
+    <body>
+    
+    </body>
+</html>
